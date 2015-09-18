@@ -6,6 +6,7 @@ inherit packagegroup
 
 PACKAGES = "\
     packagegroup-example \
+    packagegroup-example-python \
     packagegroup-example-debug \
 "
 
@@ -30,8 +31,23 @@ RDEPENDS_packagegroup-example = "\
     ntp \
     ntpdate \
     perl \
+    xinput-calibrator \
+"
+
+RDEPENDS_packagegroup-example-python = "\
+    python \
     python-dev \
     python-imaging \
+    python-cheetah \
+    python-modules \
+    python-argparse \
+    python-distutils \
+    python-numpy \
+    python-cython \
+    python-pip \
+    python-twisted \
+    python-six \
+    python-mako \
 "
 
 # Components used in debug example

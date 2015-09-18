@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d
 
 DISTRO_FEATURES_append = " systemd"
 
-IMAGE_FEATURES += " package-management dev-pkgs"
+IMAGE_FEATURES += "splash package-management x11-base x11-sato ssh-server-dropbear hwcodecs"
 
 IMAGE_ROOTFS_SIZE = "8192"
 
@@ -18,16 +18,15 @@ IMAGE_ROOTFS_SIZE = "8192"
 # a better compromise 2GB of free space + rootfs (about 2.5GB total)
 IMAGE_ROOTFS_EXTRA_SPACE = "2097152"
 
-#Base this image on core-image-minimal
-include recipes-core/images/core-image-minimal.bb
-
+inherit core-image
 inherit image-buildinfo
 
 IMAGE_INSTALL_append += " \
     rpi-first-run-setup \
     show-ip-address \
     packagegroup-example \
-    packagegroup-example-debug \
+    packagegroup-example-python \
+    packagegroup-core-x11-sato-games \
 "
 
 IMAGE_INSTALL_append_qemux86 += " \
