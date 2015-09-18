@@ -1,4 +1,4 @@
-meta-raspie2-example
+meta-raspi2-example
 ====================
 
 This README file contains information on configuring and building a Linux distribution for the Raspberry Pi 2
@@ -9,15 +9,16 @@ To build for the Raspberry Pi 2:<br>
 5) $ <b><i>cd poky</i></b><br>
 6) $ <b><i>git clone -b fido git://git.openembedded.org/meta-openembedded.git</i></b><br>
 7) $ <b><i>git clone -b fido git://git.yoctoproject.org/meta-raspberrypi.git</i></b><br>
-8) $ <b><i>MACHINE=raspberrypi2 source oe-init-build-env</i></b><br>
-9) edit conf/bblayers.conf, ensuring that the following layers are present in BBLAYERS:<br>
+8) $ <b><i>git clone https://github.com/s-maynard/meta-raspi2-example.git</i></b><br>
+9) $ <b><i>MACHINE=raspberrypi2 source oe-init-build-env</i></b><br>
+10) edit conf/bblayers.conf, ensuring that the following layers are present in BBLAYERS:<br>
 <b>NOTE</b> - You must replace "~" with the fully qualified path (/home/&lt;your_username&gt;)<br>
   ~/poky/meta-raspi2-example \\<br>
   ~/poky/meta-raspberrypi \\<br>
   ~/poky/meta-openembedded/meta-networking \\<br>
   ~/poky/meta-openembedded/meta-oe \\<br>
   ~/poky/meta-openembedded/meta-python \\<br>
-10) $ <b><i>MACHINE=raspberrypi2 bitbake example-image</i></b><br><br>
+11) $ <b><i>MACHINE=raspberrypi2 bitbake example-image</i></b><br><br>
 
 
 Additional Information
