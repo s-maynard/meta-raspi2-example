@@ -4,9 +4,9 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d690 \
                     file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
-DISTRO_FEATURES_append = " systemd"
+#DISTRO_FEATURES_append = " systemd"
 
-IMAGE_FEATURES += "splash package-management x11-base x11-sato ssh-server-dropbear hwcodecs"
+IMAGE_FEATURES += "splash package-management x11 x11-base hwcodecs"
 
 IMAGE_ROOTFS_SIZE = "8192"
 
@@ -25,8 +25,10 @@ IMAGE_INSTALL_append += " \
     rpi-first-run-setup \
     show-ip-address \
     packagegroup-example \
+    packagegroup-example-hardware \
+    packagegroup-example-xserver \
+    packagegroup-example-windowmanager \
     packagegroup-example-python \
-    packagegroup-core-x11-sato-games \
 "
 
 IMAGE_INSTALL_append_qemux86 += " \
