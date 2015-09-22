@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d
 DISTRO_FEATURES_append = " wayland"
 
 #IMAGE_FEATURES += "splash package-management x11 x11-base hwcodecs"
-IMAGE_FEATURES += "psplash package-management hwcodecs"
+IMAGE_FEATURES += "package-management hwcodecs"
 
 IMAGE_ROOTFS_SIZE = "8192"
 

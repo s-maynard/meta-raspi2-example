@@ -7,6 +7,7 @@ inherit packagegroup
 PACKAGES = "\
     packagegroup-example \
     packagegroup-example-hardware \
+    packagegroup-example-weston \
     packagegroup-example-xserver \
     packagegroup-example-windowmanager \
     packagegroup-example-python \
