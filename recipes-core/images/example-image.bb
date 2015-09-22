@@ -5,8 +5,10 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d
                     file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
 #DISTRO_FEATURES_append = " systemd"
+DISTRO_FEATURES_append = " wayland"
 
-IMAGE_FEATURES += "splash package-management x11 x11-base hwcodecs"
+#IMAGE_FEATURES += "splash package-management x11 x11-base hwcodecs"
+IMAGE_FEATURES += "psplash package-management hwcodecs"
 
 IMAGE_ROOTFS_SIZE = "8192"
 
@@ -26,8 +28,7 @@ IMAGE_INSTALL_append += " \
     show-ip-address \
     packagegroup-example \
     packagegroup-example-hardware \
-    packagegroup-example-xserver \
-    packagegroup-example-windowmanager \
+    packagegroup-example-weston \
     packagegroup-example-python \
 "
 

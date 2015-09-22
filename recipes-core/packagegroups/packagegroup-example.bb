@@ -46,6 +46,15 @@ RDEPENDS_packagegroup-example-hardware = "\
     rpi-gpio \
 "
 
+RDEPENDS_packagegroup-example-weston = "\
+    wayland \
+    weston \
+    weston-init \
+    weston-examples \
+    gtk+3-demo \
+    clutter-1.0-examples \
+"
+
 RDEPENDS_packagegroup-example-xserver = "\
     packagegroup-core-x11 \
     packagegroup-core-x11-utils \
