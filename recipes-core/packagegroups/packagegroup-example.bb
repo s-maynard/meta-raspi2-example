@@ -5,40 +5,40 @@ LICENSE = "MIT"
 inherit packagegroup
 
 PACKAGES = "\
-    packagegroup-example \
-    packagegroup-example-hardware \
+    packagegroup-example-base \
     packagegroup-example-weston \
-    packagegroup-example-xserver \
-    packagegroup-example-windowmanager \
-    packagegroup-example-python \
-    packagegroup-example-debug \
 "
 
 # Components used in example
-RDEPENDS_packagegroup-example = "\
-    systemd-compat-units \
+RDEPENDS_packagegroup-example-base = "\
     linux-firmware \
     psplash \
     sudo \
     bash \
     telnetd \
     sshd \
+    ntp \
+    ntpdate \
+    ntp-utils \
+    perl \
+"
+
+# Components used in example
+RDEPENDS_packagegroup-example-wireless = "\
+    packagegroup-base-wifi \
+    bridge-utils \
+    iw \
+    networkmanager \
+"
+
+RDEPENDS_packagegroup-example-tools = "\
     iperf3 \
     cronie \
     parted \
     binutils \
     binutils-symlinks \
-    packagegroup-base-wifi \
-    bridge-utils \
-    iw \
     less \
     sqlite3 \
-    networkmanager \
-    ntp \
-    ntpdate \
-    ntp-utils \
-    perl \
-    xinput-calibrator \
 "
 
 RDEPENDS_packagegroup-example-hardware = "\
@@ -96,6 +96,7 @@ RDEPENDS_packagegroup-example-windowmanager = "\
     xcursor-transparent-theme \
     xdg-utils \
     x11vnc \
+    xinput-calibrator \
 "
 
 RDEPENDS_packagegroup-example-python = "\

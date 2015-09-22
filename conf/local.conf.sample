@@ -12,7 +12,23 @@
 # the option is a question of removing the # character and making any change to the
 # variable as required.
 
-DISTRO_FEATURES_append = " opengl x11"
+#DISTRO_FEATURES_append = " opengl x11"
+GPU_MEM = "128"
+LICENSE_FLAGS_WHITELIST += "commercial"
+
+FETCHCMD_wget = "/usr/bin/env wget -t 2 -T 3000 -nv --passive-ftp --no-check-certificate"
+
+PREFERRED_PROVIDER_virtual/egl = "userland"
+PREFERRED_PROVIDER_virtual/libgles2 = "userland"
+
+MULTI_PROVIDER_WHITELIST += " \
+             virtual/libgl \
+             virtual/egl \
+             virtual/libgles2 \
+             virtual/mesa \
+"
+
+CORE_IMAGE_BASE_INSTALL_remove = " clutter-1.0-examples"
 
 #
 # Parallelism Options

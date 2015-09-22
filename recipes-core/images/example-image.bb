@@ -16,9 +16,9 @@ IMAGE_ROOTFS_SIZE = "8192"
 # for a 4GB SD card...
 #IMAGE_ROOTFS_EXTRA_SPACE = "3145728"
 # Give some extra space for development and experimentation
-#IMAGE_ROOTFS_EXTRA_SPACE = "250000"
+IMAGE_ROOTFS_EXTRA_SPACE = "250000"
 # a better compromise 2GB of free space + rootfs (about 2.5GB total)
-IMAGE_ROOTFS_EXTRA_SPACE = "2097152"
+#IMAGE_ROOTFS_EXTRA_SPACE = "2097152"
 
 inherit core-image
 inherit image-buildinfo
@@ -26,10 +26,8 @@ inherit image-buildinfo
 IMAGE_INSTALL_append += " \
     rpi-first-run-setup \
     show-ip-address \
-    packagegroup-example \
-    packagegroup-example-hardware \
+    packagegroup-example-base \
     packagegroup-example-weston \
-    packagegroup-example-python \
 "
 
 IMAGE_INSTALL_append_qemux86 += " \
