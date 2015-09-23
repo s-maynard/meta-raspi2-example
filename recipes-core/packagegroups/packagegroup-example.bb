@@ -53,7 +53,6 @@ RDEPENDS_packagegroup-example-weston = "\
     weston-init \
     weston-examples \
     gtk+3-demo \
-    clutter-1.0-examples \
 "
 
 RDEPENDS_packagegroup-example-xserver = "\
