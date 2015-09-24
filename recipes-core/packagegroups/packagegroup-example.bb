@@ -6,7 +6,9 @@ inherit packagegroup
 
 PACKAGES = "\
     packagegroup-example-base \
+    packagegroup-example-wireless \
     packagegroup-example-weston \
+    packagegroup-example-debug \
 "
 
 # Components used in example
@@ -119,6 +121,7 @@ RDEPENDS_packagegroup-example-debug = "\
     git \
     autoconf \
     automake \
+    libtool \
     cpp \
     cpp-symlinks \
     gcc \
