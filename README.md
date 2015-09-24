@@ -3,22 +3,20 @@ meta-raspi2-example
 
 This README file contains information on configuring and building a Linux distribution for the Raspberry Pi 2
 
-To build for the Raspberry Pi 2:<br>
-1) $ <b><i>cd ~</i></b><br>
-2) $ <b><i>git clone -b fido git://git.yoctoproject.org/poky.git</i></b><br>
-5) $ <b><i>cd poky</i></b><br>
-6) $ <b><i>git clone -b fido git://git.openembedded.org/meta-openembedded.git</i></b><br>
-7) $ <b><i>git clone -b fido git://git.yoctoproject.org/meta-raspberrypi.git</i></b><br>
-8) $ <b><i>git clone https://github.com/s-maynard/meta-raspi2-example.git</i></b><br>
-9) $ <b><i>MACHINE=raspberrypi2 source oe-init-build-env</i></b><br>
-10) edit conf/bblayers.conf, ensuring that the following layers are present in BBLAYERS:<br>
-<b>NOTE</b> - You must replace "~" with the fully qualified path (/home/&lt;your_username&gt;)<br>
-  ~/poky/meta-raspi2-example \\<br>
-  ~/poky/meta-raspberrypi \\<br>
-  ~/poky/meta-openembedded/meta-networking \\<br>
-  ~/poky/meta-openembedded/meta-oe \\<br>
-  ~/poky/meta-openembedded/meta-python \\<br>
-11) $ <b><i>MACHINE=raspberrypi2 bitbake example-image</i></b><br><br>
+<b><i>In your Ubuntu machine or VM terminal:</b></i><br>
+sudo apt-get update<br>
+sudo apt-get dist-upgrade<br>
+sudo apt-get install build-essential gettext bison libfile-slurp-perl gawk libncurses-dev autoconf flex doxygen libtool automake libpcre3-dev zlib1g-dev libbz2-dev subversion minicom putty libssl-dev rpm python-pexpect python-svn python-argparse vim tofrodos meld dos2unix cmake uuid-dev ruby transfig libglib2.0-dev xutils-dev lynx-cur gperf autopoint python-dulwich python-dev curl vim diffstat texinfo chrpath openjdk-7-jre sed wget cvs git-core coreutils unzip texi2html libsdl1.2-dev docbook-utils python-pysqlite2 help2man make gcc g++ desktop-file-utils libgl1-mesa-dev libglu1-mesa-dev mercurial groff tree<br>
+sudo dpkg-reconfigure dash     ### select 'no'<br>
+git clone -b fido git://git.yoctoproject.org/poky.git<br>
+cd poky<br>
+git clone -b fido git://git.openembedded.org/meta-openembedded.git<br>
+git clone git://git.yoctoproject.org/meta-raspberrypi.git<br>
+git clone https://github.com/leon-anavi/meta-weston-rpi.git<br>
+git clone https://github.com/s-maynard/meta-raspi2-example.git<br>
+echo "TEMPLATECONF=${TEMPLATECONF:-meta-raspi2-example/conf}" > .templateconf<br>
+source oe-init-build-env<br>
+bitbake example-image<br><br>
 
 
 Additional Information
