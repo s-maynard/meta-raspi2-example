@@ -7,7 +7,12 @@ inherit packagegroup
 PACKAGES = "\
     packagegroup-example-base \
     packagegroup-example-wireless \
+    packagegroup-example-tools \
+    packagegroup-example-hardware \
     packagegroup-example-weston \
+    packagegroup-example-xserver \
+    packagegroup-example-windowmanager \
+    packagegroup-example-python \
     packagegroup-example-debug \
 "
 
@@ -59,12 +64,14 @@ RDEPENDS_packagegroup-example-weston = "\
 
 RDEPENDS_packagegroup-example-xserver = "\
     packagegroup-core-x11 \
+    packagegroup-core-x11-base \
     packagegroup-core-x11-utils \
     packagegroup-fonts-truetype-core \
     localedef \
     libx11-locale \
     libxi \
     libxtst \
+    xserver-nodm-init \
     xserver-xf86-config \
     xorg-minimal-fonts \
     xkeyboard-config \
@@ -78,25 +85,12 @@ RDEPENDS_packagegroup-example-xserver = "\
 "
 
 RDEPENDS_packagegroup-example-windowmanager = "\
-    openbox \
-    openbox-config \
-    openbox-core \
-    openbox-theme-bear2 \
-    openbox-theme-clearlooks \
-    openbox-theme-onyx \
-    libcanberra-gtk2 \
-    gdk-pixbuf-loader-ico \
-    gdk-pixbuf-loader-bmp \
-    gdk-pixbuf-loader-ani \
-    gdk-pixbuf-xlib \
-    gtk-theme-clearlooks \
-    gtk-theme-crux \
-    gtk-theme-mist \
-    gnome-icon-theme \
-    hicolor-icon-theme \
-    xcursor-transparent-theme \
-    xdg-utils \
-    x11vnc \
+    matchbox-wm \
+    matchbox-session \
+    matchbox-desktop \
+    matchbox-panel \
+    mini-x-session \
+    libmatchbox \
     xinput-calibrator \
 "
 
