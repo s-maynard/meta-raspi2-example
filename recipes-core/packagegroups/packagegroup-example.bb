@@ -85,10 +85,12 @@ RDEPENDS_packagegroup-example-xserver = "\
 "
 
 RDEPENDS_packagegroup-example-windowmanager = "\
-    matchbox-wm \
-    matchbox-session \
     matchbox-desktop \
-    matchbox-panel \
+    matchbox-keyboard \
+    matchbox-panel-2 \
+    matchbox-session \
+    matchbox-terminal \
+    matchbox-wm \
     mini-x-session \
     libmatchbox \
     xinput-calibrator \

@@ -1,0 +1,13 @@
+diff --git a/matchbox-keyboard.desktop b/matchbox-keyboard.desktop
+index c092bfe..4809f65 100644
+--- a/matchbox-keyboard.desktop
++++ b/matchbox-keyboard.desktop
+@@ -1,8 +1,8 @@
+ [Desktop Entry]
+ Name=Keyboard
+ Comment=Virtual Keyboard
+-Exec=matchbox-keyboard
++Exec=toggle-matchbox-keyboard.sh
+ Type=Application
+ Icon=matchbox-keyboard.png
+ Categories=Panel;Utility;MB
