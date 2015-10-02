@@ -85,14 +85,20 @@ RDEPENDS_packagegroup-example-xserver = "\
 "
 
 RDEPENDS_packagegroup-example-windowmanager = "\
+    matchbox-config-gtk \
     matchbox-desktop \
     matchbox-keyboard \
     matchbox-panel-2 \
-    matchbox-session \
+    matchbox-session-sato \
     matchbox-terminal \
     matchbox-wm \
+    settings-daemon \
     mini-x-session \
+    gtk-sato-engine \
+    sato-icon-theme \
     libmatchbox \
+    x11vnc \
+    libsdl \
     xinput-calibrator \
 "
 
