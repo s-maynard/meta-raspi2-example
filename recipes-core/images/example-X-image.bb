@@ -28,6 +28,7 @@ IMAGE_INSTALL_append += " \
     packagegroup-example-wireless \
     packagegroup-example-xserver \
     packagegroup-example-windowmanager \
+    packagegroup-example-python \
     packagegroup-example-debug \
 "
 
