@@ -24,6 +24,9 @@ RDEPENDS_packagegroup-example-base = "\
     bash \
     telnetd \
     sshd \
+    ssh \
+    curl \
+    wget \
     ntp \
     ntpdate \
     ntp-utils \
